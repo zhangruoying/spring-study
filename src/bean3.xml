@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="book" class="main.java.Book"/>
+
+    <aop:aspect ref="myBook">
+
+        <aop:before method="around1" pointcut-ref="pointcut1"/>
+
+
+        <!--<aop:around method="around1" pointcut-ref="pointcut1"/>-->
+    </aop:aspect>
+
+
+</beans>
